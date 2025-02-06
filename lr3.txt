@@ -1,0 +1,108 @@
+//Выводит информацию об идентичности пользователя
+@f0Rtres ➜ /workspaces/02.01 (main) $ id
+uid=1000(codespace) gid=1000(codespace) groups=1000(codespace),106(ssh),107(docker),989(pipx),990(python),991(oryx),992(golang),993(sdkman),994(rvm),995(php),996(conda),997(nvs),998(nvm),999(hugo)
+//Изменяет режим доступа к файлам 
+311U22@git:~$ chmod --help
+Usage: chmod [OPTION]... MODE[,MODE]... FILE...
+  or:  chmod [OPTION]... OCTAL-MODE FILE...
+  or:  chmod [OPTION]... --reference=RFILE FILE...
+Change the mode of each FILE to MODE.
+With --reference, change the mode of each FILE to that of RFILE.
+
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's mode instead of specifying MODE values.
+                         RFILE is always dereferenced if a symbolic link.
+  -R, --recursive        change files and directories recursively
+      --help        display this help and exit
+      --version     output version information and exit
+
+Each MODE is of the form '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/chmod>
+or available locally via: info '(coreutils) chmod invocation'
+
+//Опеределяет разрешения доступа к файлам по умолчанию 
+311U22@git:~$ umask
+0002
+//Запускает командную оболочку от имени другого пользователя 
+@f0Rtres ➜ /workspaces/02.01 (main) $ su u2
+Password: 
+👋 Welcome to Codespaces! You are on our default image. 
+   - It includes runtimes and tools for Python, Node.js, Docker, and more. See the full list here: https://aka.ms/ghcs-default-image
+   - Want to use a custom image instead? Learn more here: https://aka.ms/configure-codespace
+
+🔍 To explore VS Code to its fullest, search using the Command Palette (Cmd/Ctrl + Shift + P or F1).
+
+📝 Edit away, run your app as usual, and we'll automatically make it available for you to access.
+
+rm: cannot remove '/usr/local/share/nvm/current': Permission denied
+//Выполняет команду от имени другого пользователя 
+@f0Rtres ➜ /workspaces/02.01 (main) $ sudo useradd -m -s /bin/bash u2
+@f0Rtres ➜ /workspaces/02.01 (main) $ sudo passwd u2
+New password: 
+Retype new password: 
+passwd: password updated successfully
+
+//Изменяет владельца файла 
+311U22@git:~$ chown --help
+Usage: chown [OPTION]... [OWNER][:[GROUP]] 
+//Изменяет группу файла 
+311U22@git:~$ chgrp --help
+Usage: chgrp [OPTION]... GROUP FILE...
+  or:  chgrp [OPTION]... --reference=RFILE FILE...
+Change the group of each FILE to GROUP.
+With --reference, change the group of each FILE to that of RFILE.
+
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --dereference      affect the referent of each symbolic link (this is
+                         the default), rather than the symbolic link itself
+  -h, --no-dereference   affect symbolic links instead of any referenced file
+                         (useful only on systems that can change the
+                         ownership of a symlink)
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's group rather than specifying a GROUP.
+                         RFILE is always dereferenced if a symbolic link.
+  -R, --recursive        operate on files and directories recursively
+
+The following options modify how a hierarchy is traversed when the -R
+option is also specified.  If more than one is specified, only the final
+one takes effect.
+
+  -H                     if a command line argument is a symbolic link
+                         to a directory, traverse it
+  -L                     traverse every symbolic link to a directory
+                         encountered
+  -P                     do not traverse any symbolic links (default)
+
+      --help        display this help and exit
+      --version     output version information and exit
+
+Examples:
+  chgrp staff /u      Change the group of /u to "staff".
+  chgrp -hR staff /u  Change the group of /u and subfiles to "staff".
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/chgrp>
+or available locally via: info '(coreutils) chgrp invocation'
+
+//Изменяет пароль пользователя 
+311U22@git:~$ passwd
+Changing password for 311U22.
+Current password: 
+
+311U22@git:~$ id
+uid=1024(311U22) gid=1024(311U22) groups=1024(311U22)
+
+
+:wq
+
