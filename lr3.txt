@@ -102,7 +102,3 @@ Current password:
 
 311U22@git:~$ id
 uid=1024(311U22) gid=1024(311U22) groups=1024(311U22)
-
-
-:wq
-

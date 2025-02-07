@@ -1,0 +1,53 @@
+// nano /etc/passwd                              
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+
+// sudo nano /etc/passwd
+root:!:20125:0:99999:7:::
+daemon:*:19576:0:99999:7:::
+bin:*:19576:0:99999:7:::
+sys:*:19576:0:99999:7:::
+sync:*:19576:0:99999:7:::
+games:*:19576:0:99999:7:::
+
+// nano /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,u22
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+
+// sudo nano /etc/gshadow
+root:*::
+daemon:*::
+bin:*::
+sys:*::
+adm:*::syslog,u22
+tty:*::
+disk:*::
+lp:*::
+mail:*::
+
+//
+u22@u22-VirtualBox:~$ stat lol.txt
+  Файл: lol.txt
+  Размер: 0         	Блоков: 0          Блок В/В: 4096   пустой обычный файл
+Устройство: 803h/2051d	Инода: 1365365     Ссылки: 1
+Доступ: (0765/-rwxrw-r-x)  Uid: ( 1000/     u22)   Gid: ( 1000/     u22)
+Доступ:        2025-02-07 14:35:29.034193586 +0700
+Модифицирован: 2025-02-07 14:35:29.034193586 +0700
+Изменён:       2025-02-07 14:52:37.165600607 +0700
+Создан:        2025-02-07 14:35:29.034193586 +0700
+
+//
