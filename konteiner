@@ -1,0 +1,34 @@
+u22@u22-VirtualBox:~/Рабочий стол$ docker run -it 780d97f27e58 sh
+/var/www/html $ ls
+adminer.php        index.php          plugins
+designs            plugin-loader.php  plugins-enabled
+/var/www/html $ cd plugins 
+/var/www/html/plugins $ ls
+README.md                    foreign-system.php
+adminer.js.php               frames.php
+backward-keys.php            json-column.php
+before-unload.php            login-ip.php
+codemirror.php               login-otp.php
+dark-switcher.php            login-password-less.php
+database-hide.php            login-servers.php
+designs.php                  login-ssl.php
+drivers                      login-table.php
+dump-alter.php               master-slave.php
+dump-bz2.php                 plugin.php
+dump-date.php                pretty-json-column.php
+dump-json.php                slugify.php
+dump-php.php                 sql-gemini.php
+dump-xml.php                 sql-log.php
+dump-zip.php                 table-indexes-structure.php
+edit-calendar.php            table-structure.php
+edit-foreign.php          
+
+
+u22@u22-VirtualBox:~/Рабочий стол$ docker logs 780d97f27e58
+Error response from daemon: No such container: 780d97f27e58
+\u22@u22-VirtualBox:~/Рабочий стол$ docker logs1478af78029ac5b011074e0516d936dce7a11a690e5783cd04f3d44ef212d8f88
+[Fri Mar 28 07:08:44 2025] PHP 8.4.5 Development Server (http://[::]:8080) started
+u22@u22-VirtualBox:~/Рабочий стол$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS      NAMES
+1478af78029a   adminer   "entrypoint.sh docke…"   44 seconds ago   Up 41 seconds   8080/tcp   interesting_sinoussi
+u22@u22-VirtualBox:~/Рабочий стол$ 
